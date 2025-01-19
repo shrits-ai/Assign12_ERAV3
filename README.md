@@ -60,11 +60,17 @@ pip install torch gradio transformers tiktoken
     Clone the repository and install the required dependencies.
     Ensure that you have the trained model weights (trained_model.pth) in the same directory as app.py.
     Run the app.py file to start the Gradio web interface
-    ```
+    
     python app.py
-    ```
+    
     Access the web interface from your browser and input prompts to generate text.
 ### Model Training Logs
     During training, the loss is printed after each epoch, and once the target loss is reached, the model will be saved for best_loss in 100 epoch iterations. 
     Here’s an example of the output logs from training:
+```
+using device: cuda
+Number of parameters: 124,439,808
+loaded 338025 tokens
+1 epoch = 165 batches
+```
 
