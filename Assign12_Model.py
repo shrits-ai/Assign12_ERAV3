@@ -248,11 +248,11 @@ if __name__ == "__main__":
     # NEW CODE
     optimizer = torch.optim.AdamW(model.parameters(), lr = 3e-4)
     num_batches = len(train_loader.tokens) // (train_loader.B * train_loader.T)
-    for epoch in range(100):
+    for epoch in range(75):
         # Training Loop
         model.train()  # Make sure the model is in training mode
         total_train_loss = 0.0
-        with tqdm(total=num_batches, desc=f'Epoch {epoch+1}/100', ncols=100, leave=True) as pbar:
+        with tqdm(total=num_batches, desc=f'Epoch {epoch+1}/75', ncols=100, leave=True) as pbar:
             for _ in range(num_batches):  # Iterate over batches
 
                 x, y = train_loader.next_batch()
