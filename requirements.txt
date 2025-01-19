@@ -3,3 +3,4 @@ transformers
 gradio
 tqdm
 torchvision
+tiktoken
