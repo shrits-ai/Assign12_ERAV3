@@ -271,7 +271,7 @@ if __name__ == "__main__":
                     if best_loss < target_loss:
                         torch.save(model.state_dict(), "trained_model.pth")
                         print(f"Target loss reached: {best_loss:.4f}. Model saved.")
-                        break
+                         
 
     print( loss )
 
