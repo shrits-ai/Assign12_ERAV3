@@ -1,6 +1,6 @@
 # GPT Transformer Model
 
-This repository contains a GPT-like transformer model built using PyTorch for natural language generation. The model is based on the architecture introduced in GPT-2, which has been trained on a custom dataset for text generation.
+This repository contains a GPT-like transformer model built using PyTorch for natural language generation. The model is based on the architecture introduced in GPT-2, which has been trained on a custom dataset (`input.txt` ) for text generation.
 
 ## Model Overview
 
@@ -34,3 +34,15 @@ You can install the required libraries using:
 
 ```bash
 pip install torch gradio transformers tiktoken
+```
+### Training the Model
+## Steps for Training:
+    Data Preparation: The training data is read from a text file (input.txt) and tokenized using tiktoken.
+    Model Configuration: The GPTConfig class defines hyperparameters such as the sequence length, embedding size, number of layers, and more.
+    Training Loop: The training loop uses the AdamW optimizer and a batch size of 16 with a sequence length of 128.
+    Loss Tracking: The model trains until the target loss is reached, and then the model's weights are saved to a file (trained_model.pth).
+
+###Inference with the Trained Model
+Once the model is trained, you can load the weights and generate text based on a given prompt using the provided app.py. 
+Refer to app.py shows for setting up the model for inference and use Gradio to create a web interface.
+
