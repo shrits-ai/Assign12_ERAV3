@@ -252,7 +252,7 @@ if __name__ == "__main__":
         # Training Loop
         model.train()  # Make sure the model is in training mode
         total_train_loss = 0.0
-        with tqdm(total=num_batches, desc=f'Epoch {epoch+1}/75', ncols=100, leave=True) as pbar:
+        with tqdm(total=num_batches, desc=f'Epoch {epoch+1}/100', ncols=100, leave=True) as pbar:
             for _ in range(num_batches):  # Iterate over batches
 
                 x, y = train_loader.next_batch()
